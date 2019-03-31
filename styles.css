@@ -1,0 +1,60 @@
+body{
+  background-color: #010101;
+  height: 100em;
+  text-align: center;
+}
+.container{
+  height: 100%;
+  margin-top: 100px;
+}
+.dice{
+  position: relative;
+  margin: 0 auto;
+  height: 400px;
+  width: 800px;
+  transform-style: preserve-3d;
+  animation: spin 9s infinite alternate;
+}
+img{
+  width: 100%;
+}
+@keyframes spin{
+  0%{
+    transform: rotateX(90deg) rotateY(360deg) translateZ(0px);
+  }
+}
+.side{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  opacity: .8;
+  background: white;
+  transition: 0.5s;
+}
+.dice:hover > .side{
+  border-radius: 10%;
+}
+.one{
+  transform: rotateX(90deg) translateZ(90px);
+  background: #f5f;
+}
+.two{
+  transform:translateZ(90px);
+  background: #ff5;
+}
+.three{
+  background: #5ff;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.four{
+  background: #55f;
+  transform: rotateY(180deg) translateZ(100px);
+}
+.five{
+  background: #5f5;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.six{
+  transform: rotateX(-90deg) translateZ(100px);
+  background: #f55;
+}
